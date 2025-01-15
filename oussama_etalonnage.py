@@ -1,5 +1,5 @@
 def etalonnage(nom_fichier):
-    somme_totale = 0
+    etalon = 0
     
     with open(nom_fichier, "r") as file:
         for line in file:
@@ -15,9 +15,9 @@ def etalonnage(nom_fichier):
                         premier = chiffres[0]
                         dernier = chiffres[-1]
                         valeur_etalonnage = int(premier + dernier)
-            somme_totale += valeur_etalonnage
+            etalon += valeur_etalonnage
                 
-    return somme_totale
+    return etalon
 
 
 nom_fichier = "document.txt"
